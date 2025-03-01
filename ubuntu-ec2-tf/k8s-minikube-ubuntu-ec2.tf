@@ -1,6 +1,6 @@
 # AWS provider configuration
 provider "aws" {
-  region = "us-east-1" # Customize this as needed
+  region = "ap-south-1" # Customize this as needed
 }
 
 # create random security group id 
@@ -71,7 +71,7 @@ resource "aws_instance" "minikube" {
   #explicitly passed as a hardcoded value but is dynamically fetched using the aws_ami data source.
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = "t2.medium"
-  subnet_id              = "subnet-0c9e45bc56dcf63e4" # Replace with your subnet ID
+  subnet_id              = "subnet-03c511ebf87ec21aa" # Replace with your subnet ID
   vpc_security_group_ids = [aws_security_group.minikube_sg.id]
   key_name               = "personLap"             # Replace with your AWS key pair name
 
