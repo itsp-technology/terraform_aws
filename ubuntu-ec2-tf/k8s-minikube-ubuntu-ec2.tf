@@ -73,7 +73,7 @@ resource "aws_instance" "minikube" {
   instance_type          = "t2.medium"
   subnet_id              = "subnet-03c511ebf87ec21aa" # Replace with your subnet ID
   vpc_security_group_ids = [aws_security_group.minikube_sg.id]
-  key_name               = "personLap"             # Replace with your AWS key pair name
+  key_name               = "plab"             # Replace with your AWS key pair name
 
   # User data script to install Minikube, kubectl, and start Kubernetes
   user_data = <<-EOF
